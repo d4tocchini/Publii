@@ -128,9 +128,8 @@ class Backup {
 
             archive.pipe(output);
             archive.directory(sourcePath, '/');
-            archive.finalize();
-
-            return;
+            // D4: new archiver API now returns promise
+            return archive.finalize();
         }
 
         process.send({

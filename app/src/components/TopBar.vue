@@ -3,7 +3,7 @@
         <topbar-appbar />
 
         <div class="topbar-inner">
-            <img src="../assets/images/logo.png" class="topbar-logo" alt="Logo">
+
             <topbar-notification />
             <topbar-sites v-if="displayIcon" />
             <topbar-preview-link v-if="displayIcon" />
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+// <img src="../assets/images/logo.png" class="topbar-logo" alt="Logo">
 import TopBarAppBar from './TopBarAppBar';
 import TopBarSites from './TopBarSites';
 import TopBarNotification from './TopBarNotification';
