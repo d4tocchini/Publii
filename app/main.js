@@ -1,5 +1,5 @@
 'use strict';
-
+require('../../../config')
 const electron = require('electron');
 const loadDevtool = (process.env.NODE_ENV !== 'production') ? require('electron-load-devtool') : false;
 const electronApp = electron.app;

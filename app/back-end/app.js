@@ -232,7 +232,7 @@ class App {
         // check if the config file exists
         let configFilePath = path.join(dirPath, 'input', 'config', 'site.config.json');
 
-        if(!fileExists(configFilePath)) {
+        if(!fileExists.sync(configFilePath)) {
             return;
         }
 

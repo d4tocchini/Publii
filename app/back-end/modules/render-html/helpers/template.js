@@ -45,7 +45,7 @@ class TemplateHelper {
             filePath = overrideFilePath;
         }
 
-        if(fileExists(filePath)) {
+        if(fileExists.sync(filePath)) {
             return fs.readFileSync(filePath, 'utf8');
         }
 
@@ -53,7 +53,7 @@ class TemplateHelper {
         if(fileName.indexOf('amp-') === 0) {
             filePath = path.join(__dirname, '..', '..', '..', '..', 'default-files', 'theme-files', fileName);
 
-            if(fileExists(filePath)) {
+            if(fileExists.sync(filePath)) {
                 return fs.readFileSync(filePath, 'utf8');
             }
         }
@@ -72,7 +72,7 @@ class TemplateHelper {
             filePath = overrideFilePath;
         }
 
-        if(fileExists(filePath)) {
+        if(fileExists.sync(filePath)) {
             return fs.readFileSync(filePath, 'utf8');
         }
 

@@ -80,7 +80,7 @@ class ManualDeployment {
 
         archive.pipe(output);
         archive.directory(this.deployment.inputDir, '/');
-        archive.finalize();
+        return archive.finalize(); // D4: new archiver API now returns promise
     }
 
     returnTarArchive() {
@@ -118,7 +118,7 @@ class ManualDeployment {
 
         archive.pipe(output);
         archive.directory(this.deployment.inputDir, '/');
-        archive.finalize();
+        return archive.finalize(); // D4: new archiver API now returns promise
     }
 
     endDeployment(type, pathToOutput) {
